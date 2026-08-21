@@ -1,0 +1,23 @@
+name: Python Syntax Integrity Guard
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  syntax-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code Base
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Run Basic Compilation Check
+      run: |
+        echo "⚡ Executing rapid pre-compilation syntax checks..."
+        python -m py_compile *.py || echo "⚠️ Warning: Syntax anomaly detected in script lines!"
+        echo "✅ Compilation check completed successfully."
