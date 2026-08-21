@@ -1,0 +1,16 @@
+name: Automated Visitor & Collaborator Greeter
+
+on:
+  watch:
+    types: [started] # Triggers when someone stars your repository
+  public: # Triggers when the repository visibility changes or gets activated
+
+jobs:
+  greet-visitor:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Run Greeting Script
+      run: |
+        echo "👋 Welcome Visitor! Thank you for exploring my Bioinformatics Portfolio Ecosystem."
+        echo "🧬 Current State: 28 Core Analysis Scripts | 29 Automated Cloud Systems operational."
+        echo "🌟 Feel free to review the index.html live landing page website linked in the header!"
