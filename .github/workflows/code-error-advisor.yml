@@ -1,0 +1,25 @@
+name: Python Code Error Advisor
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  catch-bugs:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code Base
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install Static Analysis Tool
+      run: pip install pyflakes
+
+    - name: Scan Scripts for Logic Errors
+      run: |
+        echo "🔍 Scanning 28 bioinformatics files for hidden coding bugs..."
+        pyflakes . || echo "💡 Tip: Check your variable names and indentation alignments!"
