@@ -1,0 +1,17 @@
+name: Interactive Visitor Navigation Guide
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  generate-guide:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Render Navigation Blueprint
+      run: |
+        echo "🗺️ COMPILING VISITOR NAVIGATION BLUEPRINT..."
+        echo "📍 Core Algorithm Hub ── global_alignment_needleman.py"
+        echo "📍 Quality Filter Hub  ── fastq_quality_filter.py"
+        echo "📍 Gene Expression Hub ── gene_expression_analyzer.py"
+        echo "✅ Map Complete: Key scientific scripts highlighted for review."
