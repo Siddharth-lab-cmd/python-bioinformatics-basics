@@ -1,3 +1,5 @@
+
+
 cat << 'EOF' > genomic_assembler.py
 def calculate_overlap(string_a, string_b, min_length=5):
     """Calculates the exact overlapping sequence boundary between two data fragments."""
