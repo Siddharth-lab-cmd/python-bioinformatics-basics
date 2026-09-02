@@ -1,3 +1,4 @@
+
 def optimize_codons_for_expression(amino_acid_sequence):
     """Optimizes an amino acid chain into highly preferred E. coli bacterial codons."""
     # E. coli highly preferred codon lookup chart
