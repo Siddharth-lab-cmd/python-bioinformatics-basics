@@ -1,3 +1,5 @@
+
+
 def extract_genbank_metadata(raw_genbank_record):
     """Parses standard administrative text metadata blocks from raw GenBank flatfiles."""
     metadata_report = {"LOCUS": "Unknown", "DEFINITION": "Unknown", "ORGANISM": "Unknown"}
